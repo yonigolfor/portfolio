@@ -51,6 +51,11 @@ export default function ContactForm() {
 
             // Show toast
             setShowToast(true);
+             // Hide toast after 3 seconds
+             setTimeout(() => {
+              setShowToast(false);
+            }, 3000);
+
           },
           (error) => {
             console.log("Error sending message: ", error.text);
@@ -112,35 +117,30 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className={`w-full py-3 px-6 rounded-lg font-semibold text-white shadow-lg transition duration-300 transform hover:scale-105 ${
-            isSubmitting
-              ? "bg-blue-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
-          }`}
-        >
-          {isSubmitting ? (
-            <div className="flex items-center justify-center gap-2">
-              <span className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-              Sending...
-            </div>
-          ) : (
-            "Send Message"
-          )}
-        </button>
+            <button
+      type="submit"
+      disabled={isSubmitting || showToast}
+      className={`w-full py-3 px-6 rounded-lg font-semibold text-white shadow-lg transition duration-300 transform hover:scale-105 ${
+        isSubmitting
+          ? "bg-blue-400 cursor-not-allowed"
+          : showToast
+          ? "bg-green-600"
+          : "bg-blue-600 hover:bg-blue-700"
+      }`}
+    >
+      {isSubmitting ? (
+        <div className="flex items-center justify-center gap-2">
+          <span className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+          Sending...
+        </div>
+      ) : showToast ? (
+        "Message sent successfully"
+      ) : (
+        "Send Message"
+      )}
+    </button>
       </form>
 
-      {/* Toast */}
-      {showToast && (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-500 animate-fade-in-out flex items-center gap-2">
-          <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          Message sent successfully!
-        </div>
-      )}
 
       {/* Fade in/out animation */}
       <style jsx>{`
