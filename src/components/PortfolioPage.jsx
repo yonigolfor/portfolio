@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ProjectsSection from "./ProjectsSection";
 import ContactForm from "./contactForm";
 import useTypingEffect from "../customHooks/useTypingEffect";
-
+import profilePhoto from "../mockups/profile.jpg"
 
 export default function PortfolioPage() {
   const typingText = useTypingEffect("Hi, I'm your next iOS Developer 🍏", 70);
@@ -62,7 +62,12 @@ export default function PortfolioPage() {
           >
             Contact Me
           </motion.button>
-        </div>                   
+        </div>      
+        <div className="mt-10">
+        
+          <img src={profilePhoto} alt="Profile Image" className="w-44 h-44 rounded-full object-cover p-1 bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-500" />
+          
+        </div>             
       </div>
       <ProjectsSection />  
       
