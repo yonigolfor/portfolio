@@ -53,7 +53,7 @@ export default function ProjectsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl"
             >
-              <div className="flex w-full mt-2 mx-1">
+              <div className="flex overflow-x-auto w-full mt-2 gap-2">
                 {project.image.map((rawImg, index) => 
                 <img
                 src={rawImg}

@@ -1,23 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import ProjectsSection from "./ProjectsSection";
 import ContactForm from "./contactForm";
+import useTypingEffect from "../customHooks/useTypingEffect";
 
-function useTypingEffect(text, speed = 100) {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayedText(text.slice(0, i + 1));
-      i++;
-      if (i === text.length) clearInterval(interval);
-    }, speed);
-    return () => clearInterval(interval);
-  }, [text, speed]);
-
-  return displayedText;
-}
 
 export default function PortfolioPage() {
   const typingText = useTypingEffect("Hi, I'm your next iOS Developer 🍏", 70);
