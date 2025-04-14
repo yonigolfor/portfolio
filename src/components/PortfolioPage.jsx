@@ -20,7 +20,7 @@ function useTypingEffect(text, speed = 100) {
 }
 
 export default function PortfolioPage() {
-  const typingText = useTypingEffect("Hi, I'm an iOS Developer 🚀", 70);
+  const typingText = useTypingEffect("Hi, I'm your next iOS Developer 🍏", 70);
 
   const contactRef = useRef(null);
 
