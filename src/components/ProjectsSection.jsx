@@ -39,7 +39,7 @@ export default function ProjectsSection() {
     ];
     return (
         <section className="relative z-10 py-20 px-8 md:px-20 bg-gray-900/90">
-        <h2 className="text-4xl font-semibold text-center mb-16">My Products</h2>
+        <h2 className="text-4xl font-semibold text-center mb-16">Some of our products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <motion.div

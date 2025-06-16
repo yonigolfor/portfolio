@@ -4,20 +4,47 @@ import ProjectsSection from "./ProjectsSection";
 import ContactForm from "./contactForm";
 import useTypingEffect from "../customHooks/useTypingEffect";
 import profilePhoto from "../mockups/profile.jpg"
+import About from "./about";
+import TopBar from "./topBar"
+import Main from "./main"
 
 export default function PortfolioPage() {
-  const typingText = useTypingEffect("Welcome to iOS Elite Company 🍏", 70);
+  const typingText = useTypingEffect("Welcome to iOS Elite 🍏", 70);
 
   const contactRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
 
-  const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  function scrollToRef(ref) {
+  ref.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function scrollTo(section) {
+  switch (section) {
+    case "Contact":
+      scrollToRef(contactRef);
+      break;
+    case "About":
+      scrollToRef(aboutRef);
+      break;
+    case "Projects":
+      scrollToRef(projectsRef)
+    // תוכל להוסיף עוד מקרים
+    default:
+      break;
+  }
+};
 
   return (
-    <div className="relative w-full min-h-screen bg-gray-950 text-white font-sans overflow-x-hidden">
+    <div className="relative w-full min-h-screen  text-white font-sans overflow-x-hidden">
+      <TopBar 
+      scrollTo={scrollTo}
+      />
+      <Main 
+      scrollTo={scrollTo}
+      />
       {/* Background video */}
-      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+      {/* <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -29,11 +56,11 @@ export default function PortfolioPage() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/60" />
-      </div>
+      </div> */}
 
       {/* Hero section */}
       {/* min h screen makes the Hero take full screen */}
-      <div className="relative z-10 p-10 flex flex-col items-center text-center min-h-screen justify-center ">
+      {/* <div className="relative z-10 p-10 flex flex-col items-center text-center min-h-screen justify-center ">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +87,7 @@ export default function PortfolioPage() {
             onClick={scrollToContact}
             className="px-6 py-3 bg-blue-600 rounded-full text-white font-semibold shadow-lg hover:bg-blue-700"
           >
-            Contact Me
+            Contact Us
           </motion.button>
         </div>      
         <div className="mt-10">
@@ -68,11 +95,17 @@ export default function PortfolioPage() {
           <img src={profilePhoto} alt="Profile Image" className="w-44 h-44 rounded-full object-cover p-1 bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-500" />
           
         </div>             
+      </div> */}
+
+      <div ref={aboutRef}>
+        <About />
       </div>
-      <ProjectsSection />  
-      
+      <div ref={projectsRef}>
+        <ProjectsSection />  
+      </div>
+
       <div ref={contactRef}>
-        <ContactForm ref={contactRef} />
+        <ContactForm />
       </div>
 
 
