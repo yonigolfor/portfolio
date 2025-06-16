@@ -6,7 +6,7 @@ import useTypingEffect from "../customHooks/useTypingEffect";
 import profilePhoto from "../mockups/profile.jpg"
 
 export default function PortfolioPage() {
-  const typingText = useTypingEffect("Hi, I'm your next iOS Developer 🍏", 70);
+  const typingText = useTypingEffect("Welcome to iOS Elite Company 🍏", 70);
 
   const contactRef = useRef(null);
 

@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
-import exerciseViewTrack from "../mockups/iFit/exerciseViewTrack.png";
 import exerciseViewFriends from "../mockups/iFit/exerciseViewFriends.png";
 import mainFeedIFit from "../mockups/iFit/mainFeed.png";
 import exerciseViewLinePreview from "../mockups/iFit/exerciseViewLinePreview.png";
