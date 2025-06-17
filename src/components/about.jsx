@@ -1,13 +1,15 @@
 const About = () => {
   return (
-    <section className='bg-white text-gray-800 py-16 px-6 md:px-12'>
-      <div className="max-w-4xl mx-auto">
-        <h2 className='text-5xl font-bold mb-6 text-black'>Why iOS Elite.</h2>
-        <p className="text-l leading-relaxed mb-2 w-1/2">
+    <section className="bg-white text-gray-800 py-16 px-6 md:px-12">
+      <div className="max-w-4xl mx-auto text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black">
+          Why iOS Elite.
+        </h2>
+        <p className="text-base sm:text-lg leading-relaxed mb-4 w-full md:w-1/2 mx-auto md:mx-0">
           <strong>iOS Elite</strong> is a boutique software development company specializing in websites, apps, and the iOS ecosystem.
           We write clean, scalable code built for the long term — easy for any developer to pick up and extend, with zero compromise on quality.
         </p>
-        <p className="text-l leading-relaxed mb-4 w-1/2">
+        <p className="text-base sm:text-lg leading-relaxed mb-4 w-full md:w-1/2 mx-auto md:mx-0">
           We don’t just build — we lead. Our team often provides mentoring, improves internal workflows, and brings a passion for excellence and speed.
           With iOS Elite, you’re not hiring just developers — you’re gaining partners fully invested in your product’s success.
         </p>
@@ -33,7 +35,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <p className="mt-10 text-lg font-medium text-gray-900  text-center">
+        <p className="mt-10 text-base sm:text-lg md:text-xl font-medium text-gray-900 text-center px-4 md:px-0">
           We don’t just develop apps — we build relationships and deliver excellence.
         </p>
       </div>
