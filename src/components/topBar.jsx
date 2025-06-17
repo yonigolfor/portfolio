@@ -1,7 +1,8 @@
 
 
 export default function TopBar({scrollTo}) {
-    return <div className="mt-10 ml-20 flex justify-between">
+    return ( 
+    <div className="my-2 ml-20 flex justify-between">
         <div className="">
             <h1 className="text-4xl italic">
             <span className="text-black">iOS </span>
@@ -28,5 +29,6 @@ export default function TopBar({scrollTo}) {
         </div>
         <div></div>
     </div>
+    )
 }
 
