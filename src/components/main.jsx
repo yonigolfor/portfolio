@@ -8,7 +8,7 @@ export default function Main({ scrollTo }) {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full object-cover opacity-70 z-0 rounded-none"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0 rounded-none"
   
       >
         <source src={workingVideoPath} type="video/mp4" />
@@ -17,11 +17,11 @@ export default function Main({ scrollTo }) {
 
       {/* תוכן מעל הוידאו */}
       <div className="relative z-10 flex justify-center w-full h-full">
-      <div className="flex flex-col items-start justify-center w-2/5 pl-4">
-        <p className="text-white text-6xl text-left mb-6 font-bold">
+      <div className="flex flex-col items-center md:items-start justify-center w-full md:w-2/5 px-4 text-center md:text-left">
+        <p className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           From idea to App Store
         </p>
-        <p className="text-white text-5xl text-left mb-6">
+        <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-6">
           End-to-end development for apps, backends, and websites — all under one roof.
         </p>
         <button
@@ -30,7 +30,7 @@ export default function Main({ scrollTo }) {
         >
           Contact Us
         </button>
-        </div>
+      </div>
       </div>
     </div>
 }
