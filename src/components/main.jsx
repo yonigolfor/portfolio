@@ -1,17 +1,19 @@
 export default function Main({ scrollTo }) {
   const workingVideoPath = '/videos/coworking.mp4'
+  const compressedVideoPath = '/videos/coworking_compressed.mp4'
 
-    return <div className="relative w-full h-screen overflow-hidden mt-6 bg-yellow-500">
+    return <div className="relative w-full h-screen overflow-hidden mt-6 bg-yellow-800">
       {/* וידאו ברקע */}
       <video
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0 rounded-none"
-  
+
       >
-        <source src={workingVideoPath} type="video/mp4" />
+        <source src={compressedVideoPath} type="video/mp4" />
         הדפדפן שלך לא תומך בתגית וידאו.
       </video>
 

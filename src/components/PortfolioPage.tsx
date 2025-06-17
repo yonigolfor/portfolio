@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import ProjectsSection from "./ProjectsSection";
 import ContactForm from "./contactForm";
 import useTypingEffect from "../customHooks/useTypingEffect";
-import profilePhoto from "../mockups/profile.jpg"
 import About from "./about";
 import TopBar from "./topBar"
 import Main from "./main"
@@ -19,7 +18,7 @@ export default function PortfolioPage() {
   ref.current?.scrollIntoView({ behavior: "smooth" });
   }
 
-  function scrollTo(section) {
+  function scrollTo(section: "Contact" | "About" | "Projects") {
   switch (section) {
     case "Contact":
       scrollToRef(contactRef);
@@ -29,7 +28,7 @@ export default function PortfolioPage() {
       break;
     case "Projects":
       scrollToRef(projectsRef)
-    // תוכל להוסיף עוד מקרים
+      
     default:
       break;
   }
@@ -44,12 +43,13 @@ export default function PortfolioPage() {
       </div>
       
       <Main 
-      scrollTo={scrollTo}
+        scrollTo={scrollTo}
       />
 
       <div ref={aboutRef}>
         <About />
       </div>
+      
       <div ref={projectsRef}>
         <ProjectsSection />  
       </div>
