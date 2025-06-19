@@ -2,7 +2,7 @@ export default function Main({ scrollTo }) {
   const workingVideoPath = '/videos/coworking.mp4'
   const compressedVideoPath = '/videos/coworking_compressed.mp4'
 
-    return <div className="relative w-full h-screen overflow-hidden mt-6 bg-yellow-800">
+    return <div className="relative w-full h-4/5 overflow-hidden mt-6 bg-black">
       {/* וידאו ברקע */}
       <video
         autoPlay

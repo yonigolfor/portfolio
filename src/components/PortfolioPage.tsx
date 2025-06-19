@@ -35,7 +35,7 @@ export default function PortfolioPage() {
 };
 
   return (
-    <div className="relative w-full min-h-screen  text-white font-sans overflow-x-hidden">
+    <div className="relative w-full h-screen text-white font-sans overflow-x-hidden">
       <div className="fixed top-0 left-0 w-full z-50 bg-slate-100">  
         <TopBar 
         scrollTo={scrollTo}
