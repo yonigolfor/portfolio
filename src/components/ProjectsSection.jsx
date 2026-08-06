@@ -13,8 +13,19 @@ import connect4 from "../mockups/connect4/main.png"
 
 import headlightsOldMainFeed from "../mockups/Headlights/oldMainFeed.jpeg"
 
+import swipyCleanGallery from "../mockups/Swipy/cleanGallery.png"
+import swipyPrivacy from "../mockups/Swipy/privacy.png"
+import swipyCategories from "../mockups/Swipy/categories.png"
+import swipyShuffle from "../mockups/Swipy/shuffle.png"
+import swipyReviewBin from "../mockups/Swipy/reviewBin.png"
+
 export default function ProjectsSection() {
     const projects = [
+      {
+        title: "Swipy App",
+        description: "Swipe your gallery, free iPhone storage in seconds!",
+        image: [swipyCleanGallery, swipyPrivacy, swipyCategories, swipyShuffle, swipyReviewBin],
+      },
       {
         title: "iFit App",
         description: "Social gym tracking app built with SwiftUI, Realm, and Firebase.",
