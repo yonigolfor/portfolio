@@ -29,7 +29,7 @@ export default function ProjectsSection() {
         image: [swipyCleanGallery, swipyPrivacy, swipyCategories, swipyShuffle, swipyReviewBin],
       },
       {
-        title: "iFit App",
+        title: "Fituro App",
         description: "Social gym tracking app built with SwiftUI, Realm, and Firebase.",
         image: [exerciseViewFriends, exerciseViewLinePreview, mainFeedIFit, mockupStopwatch],
       },
